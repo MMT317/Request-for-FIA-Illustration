@@ -45,11 +45,18 @@
       padding: 1.25rem 2rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 1rem;
     }
     .site-header .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      width: 100%;
+    }
+    .site-header .brand-logos {
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -62,28 +69,23 @@
       flex-shrink: 0;
       box-shadow: 0 2px 8px rgba(201,168,76,0.3);
     }
-    .site-header .brand-divider {
-      width: 1px; height: 36px;
-      background: rgba(255,255,255,0.15);
-      flex-shrink: 0;
-    }
     .site-header .brand-text h1 {
       font-family: var(--font-display);
       font-size: 1.35rem; font-weight: 700;
       color: var(--white); line-height: 1.2;
+      text-align: center;
     }
     .site-header .brand-text p {
       font-size: 0.75rem; color: var(--gold);
       letter-spacing: 2.5px; text-transform: uppercase;
       font-weight: 600; margin-top: 2px;
+      text-align: center;
     }
-    .header-badge {
-      display: flex; align-items: center;
-    }
-    .header-badge img {
-      height: 48px;
+    .site-header .logo-img-feg {
+      height: 52px;
       width: auto;
       border-radius: 4px;
+      flex-shrink: 0;
       filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
     }
 
@@ -307,12 +309,12 @@
       .form-row { grid-template-columns: 1fr; }
       .site-header { padding: 1rem; }
       .site-header .logo-img { height: 44px; width: 44px; }
+      .site-header .logo-img-feg { height: 40px; }
       .page-body { padding: 1.5rem 1rem 3rem; }
       .page-title h2 { font-size: 1.5rem; }
       .section-body { padding: 1.25rem 1rem; }
       .btn-submit { width: 100%; justify-content: center; }
       .btn-reset { width: 100%; justify-content: center; margin-left: 0; margin-top: 0.75rem; }
-      .header-badge { display: none; }
     }
 
     /* ── Print ── */
@@ -328,15 +330,14 @@
   <!-- Header -->
   <header class="site-header">
     <div class="brand">
-      <img src="./assets/Coin_Logo.jpg" alt="MMT Move Mountains Team" class="logo-img">
-      <div class="brand-divider"></div>
+      <div class="brand-logos">
+        <img src="Coin_Logo.jpg" alt="MMT Move Mountains Team" class="logo-img">
+        <img src="FEG_Logo_Family.jpg" alt="Freedom Equity Group" class="logo-img-feg">
+      </div>
       <div class="brand-text">
         <h1>MMT Financial and Insurance</h1>
         <p>Educate · Protect · Wealth</p>
       </div>
-    </div>
-    <div class="header-badge">
-      <img src="./assets/FEG_Logo_Family.jpg" alt="Freedom Equity Group">
     </div>
   </header>
 
@@ -582,7 +583,8 @@
     <p>
       &copy; 2025 MMT Financial and Insurance — A Freedom Equity Group Affiliate<br>
       <a href="mailto:marc@mmtfininsurance.com">marc@mmtfininsurance.com</a> &nbsp;·&nbsp;
-      <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a>
+      <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a><br>
+      Marc Merritt: (646) 645-2453 &nbsp;·&nbsp; Marylene Teopengco-Merritt: (631) 579-1904
     </p>
   </footer>
 
